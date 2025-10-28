@@ -1,0 +1,16 @@
+    name: Super-Linter
+
+    on: [push, pull_request]
+
+    jobs:
+      lint:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout Code
+            uses: actions/checkout@v4
+
+          - name: Run Super-Linter
+            uses: super-linter/super-linter@v5 # Use the latest version
+            env:
+              DEFAULT_BRANCH: main # Or your default branch name
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
