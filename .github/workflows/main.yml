@@ -37,4 +37,3 @@ jobs:
 
       - name: Deploy application
         run: echo "Deploying application..."
-        # Replace with your actual deployment commands, e.g., using a deployment action
